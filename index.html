@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>cat</title>
+        <style>
+            html, body {
+                position: relative;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: end;
+                align-items: end;
+                /* overflow: hidden; */
+            }
+
+            img {
+                display: block;
+                position: absolute;
+                pointer-events: none;
+                user-select: none;
+            }
+
+            ul {
+                padding: 0;
+            }
+
+            .keyboard {
+                right: 0;
+                bottom: 0;
+                cursor: pointer;
+                background-color: transparent;
+                user-select: none;
+            }
+            .keys {
+                display: flex;
+                list-style: none;
+                margin: 0 0;
+            }
+            li {
+                box-shadow: 0 0px 5px rgb(255, 255, 255), 0 4px 15px rgba(0, 0, 0,0.3);
+                width: 3em;
+                font-size: 4.5px;
+                margin: 0.2em;
+                background-color: #f2f2f2;
+                border-radius: 15px;
+                text-align: center;
+                line-height: 3em;
+                transition: all 0.25s;
+            }
+            li:active {
+                box-shadow: 0 0 4px 0 rgba(0, 0, 0,0.15);
+                color:rgb(12, 164, 190);
+                text-shadow: 0 0 15px #57c1f1;
+                background:rgba(0, 0, 0, 0.5);
+            }
+            li.active {
+                box-shadow: 0 0 4px 0 rgba(0, 0, 0,0.15);
+                color: rgb(12, 164, 190);
+                text-shadow: 0 0 15px #57c1f1;
+                background:rgba(0, 0, 0, 0.5);
+            }
+            .one {
+                color:#eb3f33;
+            }
+            .one li {
+                width: 3.4em;
+            }
+            .two {
+                color: #df960e;
+            }
+            .three {
+                color:#2b46df;
+            }
+            .four {
+                color:rgb(57,194,75);
+            }
+            .five {
+                color:#8919ca;
+            }
+            .six {
+                color: #e73d09;
+            }
+            .esc {
+                width: 3.5em;
+            }
+            .back {
+                width: 4.7em;
+            }
+            .tab {
+                width: 4.7em;
+            }
+            .caps {
+                width: 6.3em;
+            }
+            .enter {
+                width: 4.7em;
+            }
+            .shift {
+                width: 7.2em;
+            }
+            .ctrl,
+            .win,
+            .alt,
+            .fn,
+            .menu {
+                width: 4.7em;
+            }
+            .space {
+                width: 18em;
+            }
+            .zr {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100vw;
+                height: 100vh;
+                pointer-events: none;
+            }
+        </style>
+        <style>
+            .cat {
+                position: absolute;
+                bottom: 90px;
+                right: 40px;
+                width: 100px;
+                height: 100px;
+                font-size: 20px;
+                cursor: pointer;
+            }
+            .cat-body {
+                width: 5em;
+                height: 5em;
+            }
+            .cat-eyeleft {
+                left: 0.9em;
+                top: 1em;
+                width: 0.5em;
+                height: 0.3em;
+                transform-origin: 50% 50%;
+                animation: 5s linear 5s infinite alternate blink_eye;
+            }
+            .cat-eyeright {
+                left: 1.8em;
+                top: 1em;
+                width: 0.5em;
+                height: 0.3em;
+                animation: 5s linear 5s infinite alternate blink_eye;
+            }
+            .cat-legleft {
+                top: 4.5em;
+                left: -0.1em;
+                width: 1em;
+                height: 1em;
+            }
+            .cat-legright {
+                left: 2.8em;
+                top: 4.4em;
+                width: 1em;
+                height: 1em;
+            }
+
+            @keyframes blink_eye {
+                98% {
+                    transform: scaleY(1);
+                }
+                100% {
+                    transform: scaleY(0);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="keyboard">
+            <ul class="keys one">
+                <li code="1" class="esc" type="left">Esc</li>
+                <li code="59" type="left">F1</li>
+                <li code="60" type="left">F2</li>
+                <li code="61" type="left">F3</li>
+                <li code="62" type="left">F4</li>
+                <li code="63" type="left">F5</li>
+                <li code="64" type="left">F6</li>
+                <li code="65" type="right">F7</li>
+                <li code="66" type="right">F8</li>
+                <li code="67" type="right">F9</li>
+                <li code="68" type="right">F10</li>
+                <li code="87" type="right">F11</li>
+                <li code="88" type="right">F12</li>
+            </ul>
+            <ul class="keys two">
+                <li code="41">`</li>
+                <li code="2" type="left">1</li>
+                <li code="3" type="left">2</li>
+                <li code="4" type="left">3</li>
+                <li code="5" type="left">4</li>
+                <li code="6" type="left">5</li>
+                <li code="7" type="left">6</li>
+                <li code="8" type="right">7</li>
+                <li code="9" type="right">8</li>
+                <li code="10" type="right">9</li>
+                <li code="11" type="right">0</li>
+                <li code="12" type="right">-</li>
+                <li code="13" type="right">=</li>
+                <li code="14" class="back" type="right"><-</li>
+            </ul>
+            <ul class="keys three">
+                <li code="15" class="tab" type="left">Tab</li>
+                <li code="16" type="left">Q</li>
+                <li code="17" type="left">W</li>
+                <li code="18" type="left">E</li>
+                <li code="19" type="left">R</li>
+                <li code="20" type="left">T</li>
+                <li code="21" type="left">Y</li>
+                <li code="22" type="right">U</li>
+                <li code="23" type="right">I</li>
+                <li code="24" type="right">O</li>
+                <li code="25" type="right">P</li>
+                <li code="26" type="right">[</li>
+                <li code="27" type="right">]</li>
+                <li code="43" type="right">\</li>
+            </ul>
+            <ul class="keys four">
+                <li code="58" class="caps" type="left">Caps</li>
+                <li code="30" type="left">A</li>
+                <li code="31" type="left">S</li>
+                <li code="32" type="left">D</li>
+                <li code="33" type="left">F</li>
+                <li code="34" type="left">G</li>
+                <li code="35" type="right">H</li>
+                <li code="36" type="right">J</li>
+                <li code="37" type="right">K</li>
+                <li code="38" type="right">L</li>
+                <li code="39" type="right">;</li>
+                <li code="40" type="right">'</li>
+                <li code="28" class="enter" type="right">Enter</li>
+            </ul>
+            <ul class="keys five">
+                <li code="42" class="shift" type="left">Shift</li>
+                <li code="44" type="left">Z</li>
+                <li code="45" type="left">X</li>
+                <li code="46" type="left">C</li>
+                <li code="47" type="left">V</li>
+                <li code="48" type="right">B</li>
+                <li code="49" type="right">N</li>
+                <li code="50" type="right">M</li>
+                <li code="51" type="right">,</li>
+                <li code="52" type="right">.</li>
+                <li code="53" type="right">/</li>
+                <li code="54" class="shift" type="right">Shift</li>
+            </ul>
+            <ul class="keys six">
+                <li code="29" class="ctrl" type="left">Ctrl</li>
+                <li code="3675" class="fn" type="left">Fn</li>
+                <li code="56" class="alt" type="left">Alt</li>
+                <li code="57" class="space" type="left right">Space</li>
+                <li code="3640" class="alt" type="right">Alt</li>
+                <li code="3676" class="menu" type="right">Menu</li>
+                <li code="3613" class="ctrl" type="right">Ctrl</li>
+            </ul>
+        </div>
+        <div id="cat" class="cat">
+            <img id="catbody" class="cat-body" src="img/cat/body_shut.png" />
+            <img class="cat-eyeleft" src="img/cat/eye_left.png" />
+            <img class="cat-eyeright" src="img/cat/eye_right.png" />
+            <!-- <img class="cat-legleft" src="img/cat/leg_left.png" />
+            <img class="cat-legright" src="img/cat/leg_right.png" /> -->
+        </div>
+        <div id="zr" class="zr"></div>
+    </body>
+    <script src="./src/zrender.js"></script>
+    <script src="./src/renderer.js"></script>
+</html>
