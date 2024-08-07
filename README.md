@@ -6,7 +6,7 @@
 
 ## 效果
 
-![img](https://playground.guolefeng.com/assets/screenrecording.gif)
+![img](https://github.com/Guolefeng/cat/blob/main/file/cat.png)
 
 ## 下载地址
 
