@@ -6,7 +6,7 @@
 
 ## 效果
 
-![](https://playground.guolefeng.com/assets/screenrecording.gif)
+![img](https://playground.guolefeng.com/assets/screenrecording.gif)
 
 ## node 版本
 
