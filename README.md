@@ -2,23 +2,31 @@
 
 打字跟随
 
-## 效果图
+桌面端系统，支持 windows 与 macos，具体是用 Electron 实现的一个暹罗猫（我家小猫）同步跟随键盘每一个按键打字，同时张嘴吐小花花，每隔 5s 会眨眼一次，可拖拽修改位置。欢迎下载体验!
 
-![](https://github.com/Guolefeng/cat/file/screenrecording.gif)
+## 效果
 
-## Project Setup
+![](https://playground.guolefeng.com/assets/screenrecording.gif)
+
+## node 版本
+
+```
+v20.16.0
+```
+
+## 安装依赖
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### 开发
 
 ```sh
-npm run start
+npm start
 ```
 
-### Type-Check, Compile and Minify for Production
+### 打包
 
 ```sh
 npm run make
