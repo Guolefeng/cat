@@ -8,6 +8,12 @@
 
 ![](https://playground.guolefeng.com/assets/screenrecording.gif)
 
+## 下载地址
+
+[windows 可直接运行包](https://le-zi.cn/cat-win32-x64.zip)
+[windows 安装包](https://le-zi.cn/cat-1.0.0Setup.zip)
+[macos 安装包](https://le-zi.cn/cat-1.0.0-full.zip)
+
 ## node 版本
 
 ```
