@@ -9,8 +9,8 @@ class Flower {
         this.img = document.createElement("img");
         this.img.src = `img/flower/${url}`;
         this.img.width = Math.random() * 40 + 5;
-        this.x = 87;
-        this.y = 145;
+        this.x = 50;
+        this.y = 50;
         this.rotaion = 0;
         this.speedX = Math.random() * 6 + 5;
         this.speedY = Math.random() * 6 + 9;

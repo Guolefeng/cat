@@ -13,7 +13,7 @@
                 display: flex;
                 justify-content: end;
                 align-items: end;
-                /* overflow: hidden; */
+                overflow: hidden;
             }
 
             img {
@@ -28,11 +28,12 @@
             }
 
             .keyboard {
-                right: 0;
-                bottom: 0;
+                margin-right: 16px;
                 cursor: pointer;
                 background-color: transparent;
                 user-select: none;
+                pointer-events: none;
+                z-index: 2;
             }
             .keys {
                 display: flex;
@@ -42,9 +43,9 @@
             li {
                 box-shadow: 0 0px 5px rgb(255, 255, 255), 0 4px 15px rgba(0, 0, 0,0.3);
                 width: 3em;
-                font-size: 4.5px;
+                font-size: 2px;
                 margin: 0.2em;
-                background-color: #f2f2f2;
+                background-color: #f7f2ce;
                 border-radius: 15px;
                 text-align: center;
                 line-height: 3em;
@@ -118,36 +119,38 @@
                 width: 100vw;
                 height: 100vh;
                 pointer-events: none;
+                z-index: 3;
             }
         </style>
         <style>
             .cat {
                 position: absolute;
-                bottom: 90px;
-                right: 40px;
+                bottom: 0px;
+                right: 0px;
                 width: 100px;
                 height: 100px;
                 font-size: 20px;
                 cursor: pointer;
+                z-index: 1;
             }
             .cat-body {
                 width: 5em;
-                height: 5em;
+                /* height: 5em; */
+            }
+            .cat-eyeright,
+            .cat-eyeleft {
+                top: 1.27em;
+                width: 0.6em;
+                height: 0.5em;
+                transform-origin: 50% 50%;
+                animation: 2s linear 2s infinite alternate blink_eye;
             }
             .cat-eyeleft {
-                left: 0.9em;
-                top: 1em;
-                width: 0.5em;
-                height: 0.3em;
-                transform-origin: 50% 50%;
-                animation: 5s linear 5s infinite alternate blink_eye;
+                left: 0.8em;
+                
             }
             .cat-eyeright {
                 left: 1.8em;
-                top: 1em;
-                width: 0.5em;
-                height: 0.3em;
-                animation: 5s linear 5s infinite alternate blink_eye;
             }
             .cat-legleft {
                 top: 4.5em;
