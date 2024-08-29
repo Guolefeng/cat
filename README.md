@@ -14,26 +14,10 @@
 [windows 安装包](https://le-zi.cn/cat-1.0.0-setup.zip)
 [macos 安装包](https://le-zi.cn/cat-1.0.0-full.zip)
 
-## node 版本
+## Related
 
-```
-v20.16.0
-```
+-   [mindmap](https://github.com/Guolefeng/mindmap) - 简单的脑图 npm 包
 
-## 安装依赖
+## License
 
-```sh
-npm install
-```
-
-### 开发
-
-```sh
-npm start
-```
-
-### 打包
-
-```sh
-npm run make
-```
+ISC © [guolefeng](https://guolefeng.com)
